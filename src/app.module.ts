@@ -19,7 +19,7 @@ import { WorkflowsModule } from './workflows/workflows.module';
       password: process.env.DB_PASSWORD || 'password',
       database: process.env.DB_NAME || 'flow-app',
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
-      synchronize: process.env.NODE_ENV !== 'production', 
+      synchronize: true, 
       logging: process.env.NODE_ENV === 'development', 
       ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
       extra: {
